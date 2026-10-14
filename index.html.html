@@ -1,0 +1,2837 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="theme-color" content="#0f4c81">
+  <meta name="description" content="Dua Academy Lahore — quality education, dedicated teachers, and a brighter future for every student.">
+  <title>Dua Academy | Learn Today. Lead Tomorrow.</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* =========================================
+       1. DESIGN SYSTEM
+    ========================================= */
+
+    :root {
+      --blue: #0f4c81;
+      --blue-dark: #082e50;
+      --blue-light: #1d4ed8;
+      --gold: #f59e0b;
+      --gold-light: #fff4d9;
+      --ink: #14253d;
+      --muted: #66758b;
+      --white: #ffffff;
+      --surface: #f5f8fc;
+      --border: #e4eaf2;
+      --shadow: 0 18px 55px rgba(15, 48, 83, 0.09);
+      --radius: 24px;
+      --container: 1160px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 105px;
+    }
+
+    body {
+      font-family: "DM Sans", sans-serif;
+      background: var(--white);
+      color: var(--ink);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    body,
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    button,
+    a {
+      outline-offset: 5px;
+    }
+
+    ::selection {
+      background: var(--gold);
+      color: var(--blue-dark);
+    }
+
+    .container {
+      width: min(var(--container), calc(100% - 40px));
+      margin-inline: auto;
+    }
+
+    .section {
+      padding: 105px 0;
+      position: relative;
+    }
+
+    .section-soft {
+      background: var(--surface);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      color: var(--blue-light);
+      font-size: 0.77rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      display: inline-block;
+      width: 25px;
+      height: 3px;
+      border-radius: 10px;
+      background: var(--gold);
+    }
+
+    .section-heading {
+      max-width: 700px;
+      margin: 0 auto 48px;
+      text-align: center;
+    }
+
+    .section-heading h2 {
+      font-family: "Manrope", sans-serif;
+      font-size: clamp(2rem, 4vw, 3.15rem);
+      line-height: 1.2;
+      letter-spacing: -1.6px;
+      margin-bottom: 17px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      max-width: 590px;
+      margin: 0 auto;
+      font-size: 1rem;
+    }
+
+    .accent {
+      color: var(--blue-light);
+    }
+
+    .gold-text {
+      color: var(--gold);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 51px;
+      padding: 13px 23px;
+      border-radius: 12px;
+      border: 1px solid transparent;
+      font-weight: 800;
+      font-size: 0.92rem;
+      cursor: pointer;
+      transition: transform 0.25s ease, box-shadow 0.25s ease,
+                  background 0.25s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+    }
+
+    .btn-primary {
+      color: var(--white);
+      background: var(--blue);
+      box-shadow: 0 10px 25px rgba(15, 76, 129, 0.2);
+    }
+
+    .btn-primary:hover {
+      background: var(--blue-dark);
+      box-shadow: 0 14px 28px rgba(15, 76, 129, 0.25);
+    }
+
+    .btn-outline {
+      color: var(--blue);
+      background: rgba(255, 255, 255, 0.78);
+      border-color: #d8e3ef;
+    }
+
+    .btn-outline:hover {
+      background: var(--white);
+      border-color: var(--blue);
+    }
+
+    .btn-gold {
+      color: var(--blue-dark);
+      background: var(--gold);
+    }
+
+    .btn-gold:hover {
+      background: #ffc04a;
+    }
+
+    .icon {
+      width: 23px;
+      height: 23px;
+      flex: 0 0 auto;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* =========================================
+       2. OFFICIAL DESIGNER ANNOUNCEMENT
+    ========================================= */
+
+    .official-bar {
+      position: relative;
+      z-index: 1001;
+      padding: 11px 18px;
+      text-align: center;
+      color: #fff;
+      background: linear-gradient(100deg, #082e50, #0f4c81, #153d69);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+    }
+
+    .official-bar p {
+      font-size: 0.69rem;
+      line-height: 1.6;
+      letter-spacing: 1.3px;
+      font-weight: 800;
+    }
+
+    .official-bar span {
+      color: var(--gold);
+    }
+
+    /* =========================================
+       3. NAVIGATION
+    ========================================= */
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(228, 234, 242, 0.85);
+      transition: box-shadow 0.25s ease;
+    }
+
+    .navbar.scrolled {
+      box-shadow: 0 8px 28px rgba(10, 39, 69, 0.08);
+    }
+
+    .nav-inner {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .brand-mark {
+      position: relative;
+      width: 47px;
+      height: 47px;
+      flex: 0 0 auto;
+      display: grid;
+      place-items: center;
+      border-radius: 15px;
+      color: white;
+      background: linear-gradient(145deg, var(--blue), var(--blue-dark));
+      box-shadow: 0 7px 18px rgba(15, 76, 129, 0.19);
+      font-family: "Manrope", sans-serif;
+      font-weight: 800;
+      font-size: 1.15rem;
+    }
+
+    .brand-mark::after {
+      content: "";
+      position: absolute;
+      width: 9px;
+      height: 9px;
+      right: -3px;
+      top: -3px;
+      border-radius: 50%;
+      background: var(--gold);
+      border: 3px solid white;
+      box-sizing: content-box;
+    }
+
+    .brand-copy {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.3;
+    }
+
+    .brand-copy strong {
+      font-family: "Manrope", sans-serif;
+      font-size: 1.12rem;
+      font-weight: 800;
+      letter-spacing: -0.4px;
+    }
+
+    .brand-copy small {
+      color: var(--muted);
+      font-size: 0.68rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 27px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      position: relative;
+      padding: 9px 0;
+      font-size: 0.88rem;
+      color: #46566b;
+      font-weight: 700;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 2px;
+      width: 0;
+      height: 2px;
+      border-radius: 4px;
+      background: var(--gold);
+      transition: width 0.25s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--blue);
+    }
+
+    .nav-links a:hover::after,
+    .nav-links a.active::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      min-height: 44px;
+      padding: 10px 17px;
+      font-size: 0.85rem;
+      white-space: nowrap;
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 45px;
+      height: 45px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      color: var(--blue);
+      background: var(--white);
+      cursor: pointer;
+      font-size: 1.45rem;
+    }
+
+    /* =========================================
+       4. HERO SECTION
+    ========================================= */
+
+    .hero {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      padding: 90px 0 85px;
+      background:
+        radial-gradient(ellipse at 85% 15%, rgba(29, 78, 216, 0.075), transparent 35%),
+        radial-gradient(ellipse at 5% 95%, rgba(245, 158, 11, 0.08), transparent 28%),
+        linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      width: 420px;
+      height: 420px;
+      top: 8%;
+      right: -260px;
+      border: 1px solid rgba(15, 76, 129, 0.1);
+      border-radius: 50%;
+      box-shadow:
+        0 0 0 40px rgba(15, 76, 129, 0.025),
+        0 0 0 80px rgba(15, 76, 129, 0.02);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      align-items: center;
+      gap: 62px;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 9px 14px;
+      margin-bottom: 24px;
+      border: 1px solid #e0eaf5;
+      border-radius: 100px;
+      color: var(--blue);
+      background: rgba(255, 255, 255, 0.86);
+      font-size: 0.76rem;
+      font-weight: 800;
+      box-shadow: 0 5px 18px rgba(15, 48, 83, 0.04);
+    }
+
+    .badge-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--gold);
+      border-radius: 50%;
+      box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.15);
+    }
+
+    .hero h1 {
+      font-family: "Manrope", sans-serif;
+      font-size: clamp(2.8rem, 5.2vw, 4.8rem);
+      font-weight: 800;
+      line-height: 1.09;
+      letter-spacing: -3.2px;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 .highlight {
+      color: var(--blue);
+      position: relative;
+      display: inline-block;
+    }
+
+    .hero h1 .highlight::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      left: 0;
+      bottom: 2px;
+      width: 100%;
+      height: 11px;
+      background: rgba(245, 158, 11, 0.42);
+      border-radius: 8px;
+      transform: rotate(-1deg);
+    }
+
+    .hero-description {
+      max-width: 540px;
+      color: var(--muted);
+      font-size: 1.05rem;
+      line-height: 1.9;
+      margin-bottom: 30px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+      margin-bottom: 36px;
+    }
+
+    .hero-points {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 17px;
+    }
+
+    .hero-point {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #47576c;
+      font-size: 0.82rem;
+      font-weight: 700;
+    }
+
+    .check-icon {
+      display: grid;
+      place-items: center;
+      width: 21px;
+      height: 21px;
+      color: var(--blue);
+      background: #e8f1fc;
+      border-radius: 50%;
+      font-size: 0.75rem;
+      font-weight: 900;
+    }
+
+    /* Hero illustration made with CSS and emoji */
+
+    .hero-visual {
+      position: relative;
+      min-height: 475px;
+      display: grid;
+      place-items: center;
+    }
+
+    .visual-orbit {
+      position: absolute;
+      width: min(100%, 435px);
+      aspect-ratio: 1;
+      border: 1px dashed rgba(15, 76, 129, 0.19);
+      border-radius: 50%;
+      animation: orbit 50s linear infinite;
+    }
+
+    .visual-orbit::before,
+    .visual-orbit::after {
+      content: "";
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--gold);
+      box-shadow: 0 0 0 6px rgba(245, 158, 11, 0.12);
+    }
+
+    .visual-orbit::before {
+      top: 12%;
+      left: 17%;
+    }
+
+    .visual-orbit::after {
+      right: 9%;
+      bottom: 25%;
+      background: var(--blue-light);
+      box-shadow: 0 0 0 6px rgba(29, 78, 216, 0.1);
+    }
+
+    @keyframes orbit {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .hero-card {
+      position: relative;
+      width: min(100%, 370px);
+      min-height: 385px;
+      padding: 35px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.75);
+      border-radius: 30px;
+      color: white;
+      background:
+        radial-gradient(circle at 90% 0%, rgba(255,255,255,0.13), transparent 32%),
+        linear-gradient(145deg, #14558b, #082e50);
+      box-shadow: 0 30px 80px rgba(8, 46, 80, 0.24);
+      transform: rotate(2deg);
+      transition: transform 0.4s ease;
+    }
+
+    .hero-card:hover {
+      transform: rotate(0deg) translateY(-5px);
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      width: 270px;
+      height: 270px;
+      right: -130px;
+      bottom: -135px;
+      border: 1px solid rgba(255,255,255,0.16);
+      border-radius: 50%;
+      box-shadow:
+        0 0 0 25px rgba(255,255,255,0.035),
+        0 0 0 50px rgba(255,255,255,0.025);
+    }
+
+    .hero-card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 35px;
+    }
+
+    .hero-card-label {
+      color: rgba(255,255,255,0.75);
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+    }
+
+    .hero-card-symbol {
+      display: grid;
+      place-items: center;
+      width: 43px;
+      height: 43px;
+      color: var(--blue-dark);
+      background: var(--gold);
+      border-radius: 14px;
+      font-size: 1.25rem;
+    }
+
+    .hero-book {
+      display: grid;
+      place-items: center;
+      width: 148px;
+      height: 148px;
+      margin: 0 auto 26px;
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 36px;
+      background: rgba(255,255,255,0.08);
+      box-shadow: inset 0 0 30px rgba(255,255,255,0.04);
+      font-size: 5rem;
+      transform: rotate(-5deg);
+    }
+
+    .hero-card h2 {
+      font-family: "Manrope", sans-serif;
+      font-size: 1.65rem;
+      text-align: center;
+      line-height: 1.3;
+      margin-bottom: 10px;
+    }
+
+    .hero-card p {
+      position: relative;
+      z-index: 1;
+      color: rgba(255,255,255,0.77);
+      text-align: center;
+      font-size: 0.88rem;
+    }
+
+    .floating-card {
+      position: absolute;
+      z-index: 3;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 15px 17px;
+      border: 1px solid rgba(228, 234, 242, 0.9);
+      border-radius: 17px;
+      background: rgba(255,255,255,0.95);
+      box-shadow: var(--shadow);
+      animation: float 5s ease-in-out infinite;
+    }
+
+    .floating-card.one {
+      top: 46px;
+      right: -6px;
+    }
+
+    .floating-card.two {
+      bottom: 32px;
+      left: -12px;
+      animation-delay: -2.3s;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-9px); }
+    }
+
+    .floating-icon {
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      flex: 0 0 auto;
+      border-radius: 13px;
+      background: var(--gold-light);
+      font-size: 1.25rem;
+    }
+
+    .floating-card strong {
+      display: block;
+      font-size: 0.87rem;
+      line-height: 1.5;
+    }
+
+    .floating-card small {
+      display: block;
+      color: var(--muted);
+      font-size: 0.72rem;
+    }
+
+    /* =========================================
+       5. HIGHLIGHT STRIP
+    ========================================= */
+
+    .highlight-strip {
+      position: relative;
+      z-index: 5;
+      margin-top: -1px;
+      background: white;
+    }
+
+    .highlight-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: white;
+      box-shadow: 0 14px 40px rgba(15, 48, 83, 0.055);
+      transform: translateY(-20px);
+    }
+
+    .highlight-item {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      padding: 25px 28px;
+    }
+
+    .highlight-item + .highlight-item {
+      border-left: 1px solid var(--border);
+    }
+
+    .highlight-item .feature-icon {
+      width: 47px;
+      height: 47px;
+      display: grid;
+      place-items: center;
+      flex: 0 0 auto;
+      border-radius: 15px;
+      background: #edf4fd;
+      color: var(--blue);
+      font-size: 1.35rem;
+    }
+
+    .highlight-item strong {
+      display: block;
+      font-size: 0.94rem;
+    }
+
+    .highlight-item p {
+      color: var(--muted);
+      font-size: 0.78rem;
+    }
+
+    /* =========================================
+       6. PRINCIPAL SECTION
+    ========================================= */
+
+    .principal-grid {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      align-items: center;
+      gap: 75px;
+    }
+
+    .principal-visual {
+      position: relative;
+      min-height: 405px;
+      display: grid;
+      place-items: center;
+    }
+
+    .principal-backdrop {
+      position: absolute;
+      inset: 12px 25px 12px 0;
+      border-radius: 32px;
+      background: linear-gradient(145deg, #eaf2fc, #f8faff);
+      overflow: hidden;
+    }
+
+    .principal-backdrop::before,
+    .principal-backdrop::after {
+      content: "";
+      position: absolute;
+      border: 1px solid rgba(15,76,129,0.12);
+      border-radius: 50%;
+    }
+
+    .principal-backdrop::before {
+      width: 300px;
+      height: 300px;
+      top: -110px;
+      right: -90px;
+    }
+
+    .principal-backdrop::after {
+      width: 240px;
+      height: 240px;
+      bottom: -120px;
+      left: -60px;
+    }
+
+    .principal-emblem {
+      position: relative;
+      z-index: 1;
+      width: 220px;
+      height: 220px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      color: white;
+      background: linear-gradient(145deg, var(--blue), var(--blue-dark));
+      border: 9px solid rgba(255,255,255,0.78);
+      box-shadow: 0 22px 50px rgba(15,76,129,0.2);
+      font-size: 6rem;
+    }
+
+    .principal-caption {
+      position: absolute;
+      z-index: 2;
+      left: 0;
+      bottom: 0;
+      padding: 19px 23px;
+      border: 1px solid var(--border);
+      border-radius: 17px;
+      background: white;
+      box-shadow: var(--shadow);
+    }
+
+    .principal-caption strong {
+      display: block;
+      font-size: 0.98rem;
+    }
+
+    .principal-caption span {
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+
+    .principal-content h2 {
+      font-family: "Manrope", sans-serif;
+      font-size: clamp(2rem, 4vw, 3.05rem);
+      letter-spacing: -1.7px;
+      line-height: 1.2;
+      margin-bottom: 22px;
+    }
+
+    .principal-content > p {
+      color: var(--muted);
+      margin-bottom: 17px;
+      font-size: 0.98rem;
+    }
+
+    .vision-box {
+      display: flex;
+      gap: 15px;
+      padding: 21px;
+      margin: 27px 0;
+      border: 1px solid #e3ebf6;
+      border-left: 4px solid var(--gold);
+      border-radius: 14px;
+      background: #f8fbff;
+    }
+
+    .vision-box .vision-icon {
+      font-size: 1.5rem;
+      flex: 0 0 auto;
+    }
+
+    .vision-box strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .vision-box p {
+      color: var(--muted);
+      font-size: 0.87rem;
+    }
+
+    .signature {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 26px;
+    }
+
+    .signature-line {
+      width: 36px;
+      height: 3px;
+      border-radius: 5px;
+      background: var(--gold);
+    }
+
+    .signature strong {
+      display: block;
+      font-size: 0.94rem;
+    }
+
+    .signature small {
+      color: var(--muted);
+      font-size: 0.78rem;
+    }
+
+    /* =========================================
+       7. TEACHERS SECTION
+    ========================================= */
+
+    .teachers-section {
+      overflow: hidden;
+    }
+
+    .teachers-section::before {
+      content: "";
+      position: absolute;
+      top: 130px;
+      left: -210px;
+      width: 340px;
+      height: 340px;
+      border-radius: 50%;
+      background: rgba(29, 78, 216, 0.035);
+      pointer-events: none;
+    }
+
+    .teachers-topline {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 25px;
+      margin-bottom: 42px;
+    }
+
+    .teachers-topline .section-heading {
+      margin: 0;
+      text-align: left;
+    }
+
+    .teachers-topline .section-heading p {
+      margin: 0;
+    }
+
+    .faculty-count {
+      flex: 0 0 auto;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 16px;
+      border: 1px solid var(--border);
+      border-radius: 13px;
+      background: white;
+      color: var(--blue);
+      font-size: 0.84rem;
+      font-weight: 800;
+    }
+
+    .faculty-count span {
+      display: grid;
+      place-items: center;
+      width: 29px;
+      height: 29px;
+      color: var(--blue-dark);
+      background: var(--gold-light);
+      border-radius: 9px;
+    }
+
+    .teacher-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 23px;
+    }
+
+    .teacher-card {
+      position: relative;
+      isolation: isolate;
+      min-width: 0;
+      padding: 29px 25px;
+      border: 1px solid var(--border);
+      border-radius: 21px;
+      background: white;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease,
+                  border-color 0.3s ease;
+    }
+
+    .teacher-card::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: -75px;
+      right: -65px;
+      width: 155px;
+      height: 155px;
+      border-radius: 50%;
+      background: #f0f5fc;
+      transition: transform 0.4s ease;
+    }
+
+    .teacher-card:hover {
+      transform: translateY(-7px);
+      border-color: #cbdced;
+      box-shadow: 0 22px 45px rgba(15, 48, 83, 0.09);
+    }
+
+    .teacher-card:hover::before {
+      transform: scale(1.25);
+    }
+
+    .teacher-card:nth-child(3n + 2) .teacher-avatar {
+      background: #fff5df;
+    }
+
+    .teacher-card:nth-child(3n) .teacher-avatar {
+      background: #e8f7f2;
+    }
+
+    .teacher-avatar {
+      width: 61px;
+      height: 61px;
+      display: grid;
+      place-items: center;
+      border-radius: 18px;
+      background: #eaf2fd;
+      margin-bottom: 22px;
+      font-size: 1.9rem;
+    }
+
+    .teacher-number {
+      position: absolute;
+      top: 25px;
+      right: 25px;
+      color: #a2afbf;
+      font-family: "Manrope", sans-serif;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    .teacher-card h3 {
+      font-family: "Manrope", sans-serif;
+      font-size: 1.18rem;
+      line-height: 1.4;
+      margin-bottom: 7px;
+    }
+
+    .teacher-subject {
+      display: inline-block;
+      margin-bottom: 14px;
+      color: var(--blue-light);
+      font-size: 0.78rem;
+      font-weight: 800;
+    }
+
+    .teacher-description {
+      color: var(--muted);
+      font-size: 0.88rem;
+      line-height: 1.8;
+    }
+
+    .faculty-note {
+      margin-top: 29px;
+      padding: 19px 22px;
+      border: 1px dashed #d5e1ef;
+      border-radius: 14px;
+      color: var(--muted);
+      background: rgba(255,255,255,0.7);
+      text-align: center;
+      font-size: 0.86rem;
+    }
+
+    .faculty-note strong {
+      color: var(--blue);
+    }
+
+    /* =========================================
+       8. WHY CHOOSE US
+    ========================================= */
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .why-card {
+      position: relative;
+      padding: 34px 29px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: white;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .why-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow);
+    }
+
+    .why-card::after {
+      content: "";
+      position: absolute;
+      right: -42px;
+      bottom: -60px;
+      width: 135px;
+      height: 135px;
+      border: 1px solid rgba(15,76,129,0.09);
+      border-radius: 50%;
+      box-shadow: 0 0 0 20px rgba(15,76,129,0.025);
+    }
+
+    .why-icon {
+      display: grid;
+      place-items: center;
+      width: 62px;
+      height: 62px;
+      border-radius: 19px;
+      margin-bottom: 24px;
+      color: var(--blue);
+      background: #edf4fd;
+      font-size: 1.8rem;
+    }
+
+    .why-card:nth-child(2) .why-icon {
+      color: #8a5a00;
+      background: var(--gold-light);
+    }
+
+    .why-card:nth-child(3) .why-icon {
+      color: #08775c;
+      background: #e4f7ef;
+    }
+
+    .why-card h3 {
+      font-family: "Manrope", sans-serif;
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+    }
+
+    .why-card p {
+      color: var(--muted);
+      font-size: 0.91rem;
+      line-height: 1.85;
+    }
+
+    .why-index {
+      position: absolute;
+      top: 29px;
+      right: 27px;
+      color: #d5dfeb;
+      font-family: "Manrope", sans-serif;
+      font-size: 1.1rem;
+      font-weight: 800;
+    }
+
+    /* =========================================
+       9. CONTACT SECTION
+    ========================================= */
+
+    .contact-section {
+      overflow: hidden;
+    }
+
+    .contact-section::before {
+      content: "";
+      position: absolute;
+      right: -170px;
+      top: 80px;
+      width: 330px;
+      height: 330px;
+      border-radius: 50%;
+      background: rgba(29, 78, 216, 0.035);
+      pointer-events: none;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 35px;
+      align-items: stretch;
+    }
+
+    .contact-panel {
+      position: relative;
+      padding: 38px;
+      border-radius: 25px;
+      color: white;
+      background:
+        radial-gradient(circle at 100% 0%, rgba(255,255,255,0.11), transparent 32%),
+        linear-gradient(145deg, var(--blue), var(--blue-dark));
+      overflow: hidden;
+    }
+
+    .contact-panel::after {
+      content: "";
+      position: absolute;
+      width: 240px;
+      height: 240px;
+      right: -120px;
+      bottom: -130px;
+      border: 1px solid rgba(255,255,255,0.16);
+      border-radius: 50%;
+      box-shadow:
+        0 0 0 24px rgba(255,255,255,0.03),
+        0 0 0 48px rgba(255,255,255,0.025);
+    }
+
+    .contact-panel .eyebrow {
+      color: #ffce70;
+    }
+
+    .contact-panel h2 {
+      position: relative;
+      z-index: 1;
+      font-family: "Manrope", sans-serif;
+      font-size: clamp(2rem, 3vw, 2.7rem);
+      line-height: 1.2;
+      letter-spacing: -1.3px;
+      margin-bottom: 17px;
+    }
+
+    .contact-panel > p {
+      position: relative;
+      z-index: 1;
+      color: rgba(255,255,255,0.76);
+      font-size: 0.94rem;
+      margin-bottom: 31px;
+    }
+
+    .contact-detail {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      padding: 18px 0;
+      border-top: 1px solid rgba(255,255,255,0.14);
+    }
+
+    .contact-detail-icon {
+      display: grid;
+      place-items: center;
+      width: 43px;
+      height: 43px;
+      flex: 0 0 auto;
+      border-radius: 13px;
+      color: var(--blue-dark);
+      background: var(--gold);
+      font-size: 1.2rem;
+    }
+
+    .contact-detail small {
+      display: block;
+      color: rgba(255,255,255,0.65);
+      font-size: 0.74rem;
+      margin-bottom: 3px;
+    }
+
+    .contact-detail strong,
+    .contact-detail a {
+      display: block;
+      font-size: 0.91rem;
+      line-height: 1.7;
+      overflow-wrap: anywhere;
+    }
+
+    .contact-detail a:hover {
+      color: #ffce70;
+    }
+
+    .contact-actions {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 23px;
+    }
+
+    .contact-actions .btn {
+      min-height: 46px;
+      padding: 11px 15px;
+      font-size: 0.82rem;
+    }
+
+    .map-panel {
+      min-height: 480px;
+      display: flex;
+      flex-direction: column;
+      padding: 15px;
+      border: 1px solid var(--border);
+      border-radius: 25px;
+      background: white;
+      box-shadow: 0 14px 45px rgba(15, 48, 83, 0.06);
+    }
+
+    .map-heading {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      padding: 13px 10px 17px;
+    }
+
+    .map-heading h3 {
+      font-family: "Manrope", sans-serif;
+      font-size: 1.03rem;
+    }
+
+    .map-heading p {
+      color: var(--muted);
+      font-size: 0.79rem;
+    }
+
+    .map-label {
+      flex: 0 0 auto;
+      padding: 7px 10px;
+      border-radius: 8px;
+      color: var(--blue);
+      background: #edf4fd;
+      font-size: 0.72rem;
+      font-weight: 800;
+    }
+
+    .map-frame {
+      flex: 1;
+      min-height: 390px;
+      overflow: hidden;
+      border-radius: 17px;
+      background: #e9eef5;
+    }
+
+    .map-frame iframe {
+      display: block;
+      width: 100%;
+      height: 100%;
+      min-height: 390px;
+      border: 0;
+    }
+
+    /* =========================================
+       10. FINAL CALL TO ACTION
+    ========================================= */
+
+    .cta-section {
+      padding: 0 0 100px;
+      background: var(--white);
+    }
+
+    .cta-card {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+      padding: 44px 48px;
+      border-radius: 25px;
+      background:
+        radial-gradient(circle at 100% 0%, rgba(255,255,255,0.1), transparent 35%),
+        linear-gradient(115deg, #0b365c, #0f4c81);
+      color: white;
+      overflow: hidden;
+    }
+
+    .cta-card::after {
+      content: "";
+      position: absolute;
+      right: 25%;
+      top: -110px;
+      width: 240px;
+      height: 240px;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .cta-copy {
+      position: relative;
+      z-index: 1;
+      max-width: 650px;
+    }
+
+    .cta-copy .eyebrow {
+      color: #ffce70;
+    }
+
+    .cta-copy h2 {
+      font-family: "Manrope", sans-serif;
+      font-size: clamp(1.7rem, 3vw, 2.45rem);
+      line-height: 1.25;
+      letter-spacing: -1px;
+      margin-bottom: 12px;
+    }
+
+    .cta-copy p {
+      color: rgba(255,255,255,0.75);
+      font-size: 0.92rem;
+    }
+
+    .cta-card > .btn {
+      position: relative;
+      z-index: 1;
+      flex: 0 0 auto;
+    }
+
+    /* =========================================
+       11. FOOTER
+    ========================================= */
+
+    .footer {
+      color: rgba(255,255,255,0.8);
+      background: #071f37;
+    }
+
+    .footer-main {
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr 1fr;
+      gap: 45px;
+      padding: 65px 0 45px;
+    }
+
+    .footer .brand {
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    .footer .brand-copy small {
+      color: rgba(255,255,255,0.57);
+    }
+
+    .footer-about p {
+      max-width: 330px;
+      color: rgba(255,255,255,0.62);
+      font-size: 0.87rem;
+      line-height: 1.9;
+    }
+
+    .footer-column h3 {
+      color: white;
+      font-family: "Manrope", sans-serif;
+      font-size: 0.98rem;
+      margin-bottom: 20px;
+    }
+
+    .footer-links {
+      display: grid;
+      gap: 11px;
+      list-style: none;
+    }
+
+    .footer-links a {
+      color: rgba(255,255,255,0.65);
+      font-size: 0.86rem;
+      transition: color 0.2s ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--gold);
+    }
+
+    .footer-contact p {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 14px;
+      color: rgba(255,255,255,0.67);
+      font-size: 0.84rem;
+      line-height: 1.8;
+    }
+
+    .footer-contact span {
+      color: var(--gold);
+      flex: 0 0 auto;
+    }
+
+    .footer-bottom {
+      padding: 24px 0;
+      border-top: 1px solid rgba(255,255,255,0.11);
+    }
+
+    .footer-bottom-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .copyright {
+      color: rgba(255,255,255,0.55);
+      font-size: 0.78rem;
+    }
+
+    .designer-stamp {
+      max-width: 100%;
+      padding: 12px 15px;
+      border: 1px solid rgba(245,158,11,0.45);
+      border-radius: 11px;
+      color: white;
+      background: rgba(245,158,11,0.07);
+      text-align: center;
+      font-size: 0.68rem;
+      line-height: 1.8;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    .designer-stamp span {
+      color: var(--gold);
+    }
+
+    /* =========================================
+       12. BACK TO TOP
+    ========================================= */
+
+    .back-to-top {
+      position: fixed;
+      z-index: 999;
+      right: 22px;
+      bottom: 22px;
+      width: 47px;
+      height: 47px;
+      display: grid;
+      place-items: center;
+      border: 0;
+      border-radius: 15px;
+      color: white;
+      background: var(--blue);
+      box-shadow: 0 9px 25px rgba(15,76,129,0.25);
+      font-size: 1.35rem;
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(12px);
+      transition: opacity 0.25s ease, visibility 0.25s ease,
+                  transform 0.25s ease, background 0.25s ease;
+    }
+
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .back-to-top:hover {
+      background: var(--blue-dark);
+    }
+
+    /* =========================================
+       13. SCROLL REVEAL ANIMATIONS
+    ========================================= */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .teacher-card.reveal:nth-child(3n + 2),
+    .why-card.reveal:nth-child(3n + 2) {
+      transition-delay: 0.08s;
+    }
+
+    .teacher-card.reveal:nth-child(3n),
+    .why-card.reveal:nth-child(3n) {
+      transition-delay: 0.15s;
+    }
+
+    /* =========================================
+       14. RESPONSIVE DESIGN
+    ========================================= */
+
+    @media (max-width: 1000px) {
+      .nav-links {
+        gap: 17px;
+      }
+
+      .hero-grid {
+        gap: 32px;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.6rem, 5.2vw, 4rem);
+      }
+
+      .hero-visual {
+        min-height: 420px;
+      }
+
+      .hero-card {
+        width: 325px;
+      }
+
+      .floating-card.one {
+        right: -5px;
+      }
+
+      .floating-card.two {
+        left: -8px;
+      }
+
+      .principal-grid {
+        gap: 45px;
+      }
+
+      .teacher-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .contact-panel {
+        padding: 30px;
+      }
+
+      .footer-main {
+        gap: 30px;
+      }
+    }
+
+    @media (max-width: 780px) {
+      .section {
+        padding: 78px 0;
+      }
+
+      .nav-inner {
+        min-height: 72px;
+      }
+
+      .menu-toggle {
+        display: grid;
+        place-items: center;
+      }
+
+      .nav-cta {
+        display: none;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: calc(100% + 1px);
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 3px;
+        padding: 14px 22px 21px;
+        border-bottom: 1px solid var(--border);
+        background: white;
+        box-shadow: 0 18px 25px rgba(10,39,69,0.08);
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(-8px);
+        transition: opacity 0.2s ease, transform 0.2s ease,
+                    visibility 0.2s ease;
+      }
+
+      .nav-links.open {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .nav-links a {
+        display: block;
+        padding: 11px 7px;
+      }
+
+      .nav-links a::after {
+        display: none;
+      }
+
+      .hero {
+        padding: 65px 0 65px;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 38px;
+      }
+
+      .hero-content {
+        text-align: center;
+      }
+
+      .hero-description {
+        margin-inline: auto;
+      }
+
+      .hero-actions,
+      .hero-points {
+        justify-content: center;
+      }
+
+      .hero-visual {
+        min-height: 445px;
+        max-width: 520px;
+        width: 100%;
+        margin-inline: auto;
+      }
+
+      .hero-card {
+        transform: none;
+      }
+
+      .hero-card:hover {
+        transform: translateY(-4px);
+      }
+
+      .floating-card.one {
+        right: 0;
+        top: 25px;
+      }
+
+      .floating-card.two {
+        left: 0;
+        bottom: 15px;
+      }
+
+      .highlight-grid {
+        grid-template-columns: 1fr;
+        transform: translateY(-10px);
+      }
+
+      .highlight-item {
+        padding: 20px 24px;
+      }
+
+      .highlight-item + .highlight-item {
+        border-left: 0;
+        border-top: 1px solid var(--border);
+      }
+
+      .principal-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+      }
+
+      .principal-visual {
+        max-width: 480px;
+        width: 100%;
+        margin-inline: auto;
+      }
+
+      .principal-content {
+        max-width: 650px;
+      }
+
+      .teachers-topline {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .teachers-topline .section-heading {
+        max-width: 100%;
+      }
+
+      .why-grid {
+        grid-template-columns: 1fr;
+        max-width: 550px;
+        margin-inline: auto;
+      }
+
+      .why-card {
+        padding: 29px;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .map-panel {
+        min-height: 420px;
+      }
+
+      .map-frame,
+      .map-frame iframe {
+        min-height: 350px;
+      }
+
+      .cta-card {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 36px 30px;
+      }
+
+      .cta-section {
+        padding-bottom: 75px;
+      }
+
+      .footer-main {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .footer-about {
+        grid-column: 1 / -1;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .container {
+        width: min(var(--container), calc(100% - 30px));
+      }
+
+      .official-bar {
+        padding: 10px 13px;
+      }
+
+      .official-bar p {
+        font-size: 0.58rem;
+        letter-spacing: 0.8px;
+      }
+
+      .brand {
+        gap: 9px;
+      }
+
+      .brand-mark {
+        width: 42px;
+        height: 42px;
+        border-radius: 13px;
+      }
+
+      .brand-copy strong {
+        font-size: 1rem;
+      }
+
+      .brand-copy small {
+        font-size: 0.59rem;
+        letter-spacing: 1px;
+      }
+
+      .hero {
+        padding-top: 50px;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.45rem, 11vw, 3.45rem);
+        letter-spacing: -2px;
+      }
+
+      .hero-description {
+        font-size: 0.94rem;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .hero-actions .btn {
+        width: 100%;
+      }
+
+      .hero-points {
+        gap: 12px;
+      }
+
+      .hero-point {
+        font-size: 0.76rem;
+      }
+
+      .hero-visual {
+        min-height: 400px;
+      }
+
+      .visual-orbit {
+        width: 88%;
+      }
+
+      .hero-card {
+        width: min(82%, 330px);
+        min-height: 340px;
+        padding: 25px 21px;
+      }
+
+      .hero-card-top {
+        margin-bottom: 24px;
+      }
+
+      .hero-book {
+        width: 115px;
+        height: 115px;
+        font-size: 3.9rem;
+        border-radius: 28px;
+        margin-bottom: 21px;
+      }
+
+      .hero-card h2 {
+        font-size: 1.4rem;
+      }
+
+      .floating-card {
+        padding: 11px;
+        gap: 9px;
+      }
+
+      .floating-card.one {
+        top: 10px;
+        right: 0;
+      }
+
+      .floating-card.two {
+        left: 0;
+        bottom: 5px;
+      }
+
+      .floating-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 1.05rem;
+      }
+
+      .floating-card strong {
+        font-size: 0.75rem;
+      }
+
+      .floating-card small {
+        font-size: 0.64rem;
+      }
+
+      .section-heading {
+        margin-bottom: 35px;
+      }
+
+      .section-heading h2,
+      .principal-content h2 {
+        letter-spacing: -1px;
+      }
+
+      .principal-visual {
+        min-height: 335px;
+      }
+
+      .principal-emblem {
+        width: 175px;
+        height: 175px;
+        font-size: 4.6rem;
+      }
+
+      .principal-caption {
+        padding: 15px 18px;
+      }
+
+      .teacher-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .teacher-card {
+        padding: 25px 22px;
+      }
+
+      .faculty-count {
+        font-size: 0.77rem;
+      }
+
+      .contact-panel {
+        padding: 27px 22px;
+      }
+
+      .contact-actions {
+        flex-direction: column;
+      }
+
+      .contact-actions .btn {
+        width: 100%;
+      }
+
+      .map-panel {
+        min-height: 390px;
+        padding: 10px;
+      }
+
+      .map-heading {
+        align-items: flex-start;
+        padding: 10px 6px 14px;
+      }
+
+      .map-label {
+        font-size: 0.65rem;
+      }
+
+      .map-frame,
+      .map-frame iframe {
+        min-height: 320px;
+      }
+
+      .cta-card {
+        padding: 30px 23px;
+      }
+
+      .cta-card > .btn {
+        width: 100%;
+      }
+
+      .footer-main {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding: 50px 0 35px;
+      }
+
+      .footer-about {
+        grid-column: auto;
+      }
+
+      .footer-bottom-inner {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .designer-stamp {
+        font-size: 0.59rem;
+      }
+
+      .back-to-top {
+        right: 14px;
+        bottom: 14px;
+        width: 43px;
+        height: 43px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- OFFICIAL DESIGNER CREDIT -->
+  <div class="official-bar">
+    <p>
+      OFFICIAL PLATFORM PROUDLY DESIGNED &amp; DEVELOPED BY
+      <span>LARAIB SHAKEEL</span>
+    </p>
+  </div>
+
+  <!-- NAVIGATION -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+
+      <a class="brand" href="#home" aria-label="Dua Academy home">
+        <span class="brand-mark">D</span>
+        <span class="brand-copy">
+          <strong>Dua Academy</strong>
+          <small>Knowledge · Character · Success</small>
+        </span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="navLinks"
+      >
+        ☰
+      </button>
+
+      <nav aria-label="Main navigation">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#principal">Principal</a></li>
+          <li><a href="#teachers">Teachers</a></li>
+          <li><a href="#why-us">Why Us?</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <a class="btn btn-primary nav-cta" href="#contact">
+        Contact Us <span aria-hidden="true">↗</span>
+      </a>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+
+        <div class="hero-content reveal">
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            WELCOME TO DUA ACADEMY
+          </div>
+
+          <h1>
+            Build Your Future.<br>
+            Achieve Your <span class="highlight">Dreams.</span>
+          </h1>
+
+          <p class="hero-description">
+            Every great future begins with a strong foundation.
+            At Dua Academy, we bring together dedicated teachers,
+            meaningful learning, and a supportive environment to help
+            students move confidently toward their goals.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#teachers">
+              <span>Meet Our Teachers</span>
+              <span aria-hidden="true">→</span>
+            </a>
+
+            <a class="btn btn-outline" href="#principal">
+              Discover Our Academy
+            </a>
+          </div>
+
+          <div class="hero-points">
+            <div class="hero-point">
+              <span class="check-icon">✓</span>
+              Student-focused learning
+            </div>
+            <div class="hero-point">
+              <span class="check-icon">✓</span>
+              Dedicated faculty
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal" aria-label="Education-themed illustration">
+
+          <div class="visual-orbit"></div>
+
+          <div class="hero-card">
+            <div class="hero-card-top">
+              <span class="hero-card-label">Your journey starts here</span>
+              <span class="hero-card-symbol">✦</span>
+            </div>
+
+            <div class="hero-book" aria-hidden="true">📚</div>
+
+            <h2>Learn Today.<br>Lead Tomorrow.</h2>
+
+            <p>
+              Knowledge opens doors. Dedication helps you walk through them.
+            </p>
+          </div>
+
+          <div class="floating-card one">
+            <span class="floating-icon" aria-hidden="true">🎓</span>
+            <span>
+              <strong>Dream Bigger</strong>
+              <small>Build your potential</small>
+            </span>
+          </div>
+
+          <div class="floating-card two">
+            <span class="floating-icon" aria-hidden="true">💡</span>
+            <span>
+              <strong>Think Smarter</strong>
+              <small>Grow through learning</small>
+            </span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ACADEMY HIGHLIGHTS -->
+    <div class="highlight-strip">
+      <div class="container">
+        <div class="highlight-grid">
+
+          <div class="highlight-item">
+            <span class="feature-icon" aria-hidden="true">📘</span>
+            <div>
+              <strong>Meaningful Learning</strong>
+              <p>Build strong academic foundations.</p>
+            </div>
+          </div>
+
+          <div class="highlight-item">
+            <span class="feature-icon" aria-hidden="true">👨‍🏫</span>
+            <div>
+              <strong>Dedicated Faculty</strong>
+              <p>Learn with guidance and support.</p>
+            </div>
+          </div>
+
+          <div class="highlight-item">
+            <span class="feature-icon" aria-hidden="true">🌟</span>
+            <div>
+              <strong>A Brighter Future</strong>
+              <p>Take the next step with confidence.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- PRINCIPAL -->
+    <section class="section" id="principal">
+      <div class="container principal-grid">
+
+        <div class="principal-visual reveal">
+          <div class="principal-backdrop"></div>
+
+          <div class="principal-emblem" aria-hidden="true">
+            🎓
+          </div>
+
+          <div class="principal-caption">
+            <strong>Sir Shahid</strong>
+            <span>Principal · Dua Academy</span>
+          </div>
+        </div>
+
+        <div class="principal-content reveal">
+          <span class="eyebrow">Leadership &amp; Vision</span>
+
+          <h2>
+            Guiding Students Toward
+            <span class="accent">Excellence.</span>
+          </h2>
+
+          <p>
+            At Dua Academy, our vision is to help students develop the
+            knowledge, discipline, and confidence they need to succeed
+            in their educational journey.
+          </p>
+
+          <p>
+            Under the leadership of our principal, Sir Shahid, we aim
+            to create a positive learning environment where students
+            are encouraged to understand concepts, ask questions, and
+            prepare thoughtfully for their BISE Lahore board examinations.
+          </p>
+
+          <div class="vision-box">
+            <span class="vision-icon" aria-hidden="true">🎯</span>
+            <div>
+              <strong>Our Educational Vision</strong>
+              <p>
+                Encourage academic growth, strong character, independent
+                thinking, and a lifelong love of learning.
+              </p>
+            </div>
+          </div>
+
+          <div class="signature">
+            <span class="signature-line"></span>
+            <span>
+              <strong>Sir Shahid</strong>
+              <small>Principal, Dua Academy</small>
+            </span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TEACHERS -->
+    <section class="section section-soft teachers-section" id="teachers">
+      <div class="container">
+
+        <div class="teachers-topline">
+          <div class="section-heading">
+            <span class="eyebrow">Meet The Faculty</span>
+            <h2>
+              Great Teachers.<br>
+              <span class="accent">Greater Possibilities.</span>
+            </h2>
+            <p>
+              Meet the educators who help our students explore ideas,
+              strengthen their understanding, and work toward their goals.
+            </p>
+          </div>
+
+          <div class="faculty-count">
+            <span>9</span>
+            Faculty Members
+          </div>
+        </div>
+
+        <div class="teacher-grid">
+
+          <!-- TEACHER 1 -->
+          <article class="teacher-card reveal">
+            <span class="teacher-number">01</span>
+            <div class="teacher-avatar" aria-hidden="true">📖</div>
+            <h3>Sir Aqib</h3>
+            <span class="teacher-subject">English</span>
+            <p class="teacher-description">
+              Helping students develop reading, writing, grammar,
+              communication, and confidence in English.
+            </p>
+          </article>
+
+          <!-- TEACHER 2 -->
+          <article class="teacher-card reveal">
+            <span class="teacher-number">02</span>
+            <div class="teacher-avatar" aria-hidden="true">💻</div>
+            <h3>Sir Ali</h3>
+            <span class="teacher-subject">Computer Science</span>
+            <p class="teacher-description">
+              Introducing students to computing concepts, logical
+              thinking, and the foundations of digital technology.
+            </p>
+          </article>
+
+          <!-- TEACHER 3 -->
+          <article class="teacher-card reveal">
+            <span class="teacher-number">03</span>
+            <div class="teacher-avatar" aria-hidden="true">✍️</div>
+            <h3>Sir Asim</h3>
+            <span class="teacher-subject">Urdu</span>
+            <p class="teacher-description">
+              Developing language skills, literary understanding,
+              thoughtful expression, and clear written communication.
+            </p>
+          </article>
+
+          <!-- TEACHER 4 -->
+          <article class="teacher-card reveal">
+            <span class="teacher-number">04</span>
+            <div class="teacher-avatar" aria-hidden="true">🧪</div>
+            <h3>Sir Zeeshan</h3>
+            <span class="teacher-subject">Chemistry</span>
+            <p class="teacher-description">
+              Making chemical concepts easier to understand through
+              scientific reasoning and a focus on fundamentals.
+            </p>
+          </article>
+
+          <!-- TEACHER 5 -->
+          <article class="teacher-card reveal">
+            <span class="teacher-number">05</span>
+            <div class="teacher-avatar" aria-hidden="true">🌙</div>
+            <h3>Miss Ruqaya</h3>
+            <span class="teacher-subject">Islamiat</span>
+            <p class="teacher-description">
+              Supporting students in understanding Islamic teachings,
+              ethical values, and the importance of good character.
+            </p>
+          </article>
+
+          <!-- TEACHER 6 -->
+          <article class="teacher-card reveal">
+            <span class="teacher-number">06</span>
+            <div class="teacher-avatar" aria-hidden="true">📐</div>
+            <h3>Sir Ahmer</h3>
+            <span class="teacher-subject">Mathematics</span>
+            <p class="teacher-description">
+              Building mathematical understanding through logical
+              reasoning, clear explanations, and problem-solving practice.
+            </p>
+          </article>
+
+          <!-- TEACHER 7 -->
+          <article class="teacher-card reveal">
+            <span class="teacher-number">07</span>
+            <div class="teacher-avatar" aria-hidden="true">⚛️</div>
+            <h3>Sir Shahid</h3>
+            <span class="teacher-subject">Physics</span>
+            <p class="teacher-description">
+              Helping students explore the principles of physics,
+              understand scientific concepts, and strengthen their
+              approach to numerical problems.
+            </p>
+          </article>
+
+          <!-- TEACHER 8 -->
+          <article class="teacher-card reveal">
+            <span class="teacher-number">08</span>
+            <div class="teacher-avatar" aria-hidden="true">📊</div>
+            <h3>Miss Fatima</h3>
+            <span class="teacher-subject">Statistics</span>
+            <p class="teacher-description">
+              Explaining data, statistical concepts, and analytical
+              methods to develop confident, structured problem-solving.
+            </p>
+          </article>
+
+          <!-- TEACHER 9: NEW FACULTY MEMBER -->
+          <article class="teacher-card reveal">
+            <span class="teacher-number">09</span>
+            <div class="teacher-avatar" aria-hidden="true">🔬</div>
+            <h3>Sir Suleman</h3>
+            <span class="teacher-subject">Physics · Intermediate</span>
+            <p class="teacher-description">
+              Teaching intermediate-level physics with a focus on
+              conceptual understanding, numerical problem-solving,
+              and preparation for board examinations.
+            </p>
+          </article>
+
+        </div>
+
+        <p class="faculty-note">
+          <strong>Nine dedicated faculty profiles</strong> supporting
+          students across important academic subject areas.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section class="section" id="why-us">
+      <div class="container">
+
+        <div class="section-heading reveal">
+          <span class="eyebrow">The Dua Academy Difference</span>
+          <h2>
+            Why Choose <span class="accent">Dua Academy?</span>
+          </h2>
+          <p>
+            Education is more than memorising lessons. It is about
+            understanding, growing, and preparing for the opportunities ahead.
+          </p>
+        </div>
+
+        <div class="why-grid">
+
+          <article class="why-card reveal">
+            <span class="why-index">01</span>
+            <div class="why-icon" aria-hidden="true">📚</div>
+            <h3>Quality Education</h3>
+            <p>
+              We value clear explanations, strong subject foundations,
+              thoughtful learning, and preparation that helps students
+              approach their studies with confidence.
+            </p>
+          </article>
+
+          <article class="why-card reveal">
+            <span class="why-index">02</span>
+            <div class="why-icon" aria-hidden="true">🤝</div>
+            <h3>Dedicated Faculty</h3>
+            <p>
+              Our faculty members help students work through challenging
+              topics, ask questions, develop skills, and make progress
+              throughout their educational journey.
+            </p>
+          </article>
+
+          <article class="why-card reveal">
+            <span class="why-index">03</span>
+            <div class="why-icon" aria-hidden="true">🚀</div>
+            <h3>Bright Future</h3>
+            <p>
+              We encourage ambition, discipline, curiosity, and
+              responsibility so students can pursue future academic
+              opportunities with a stronger foundation.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section section-soft contact-section" id="contact">
+      <div class="container">
+
+        <div class="section-heading reveal">
+          <span class="eyebrow">Get In Touch</span>
+          <h2>
+            Your Next Chapter <span class="accent">Starts Here.</span>
+          </h2>
+          <p>
+            Want to learn more about Dua Academy? Get in touch or
+            find our campus location on the map below.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+
+          <div class="contact-panel reveal">
+            <span class="eyebrow">Contact Information</span>
+
+            <h2>Let's Talk About Your Future.</h2>
+
+            <p>
+              Reach out to Dua Academy for information about our
+              educational services and campus.
+            </p>
+
+            <div class="contact-detail">
+              <span class="contact-detail-icon" aria-hidden="true">📍</span>
+              <div>
+                <small>Our Campus</small>
+                <strong>
+                  Dua Academy Campus, Near Mehmood Booti Station,
+                  Lahore, Pakistan
+                </strong>
+              </div>
+            </div>
+
+            <div class="contact-detail">
+              <span class="contact-detail-icon" aria-hidden="true">📞</span>
+              <div>
+                <small>Call Us</small>
+                <a href="tel:03104051262">0310-4051262</a>
+              </div>
+            </div>
+
+            <div class="contact-detail">
+              <span class="contact-detail-icon" aria-hidden="true">💬</span>
+              <div>
+                <small>WhatsApp</small>
+                <a
+                  href="https://wa.me/923104051262"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Chat with Dua Academy
+                </a>
+              </div>
+            </div>
+
+            <div class="contact-actions">
+              <a
+                class="btn btn-gold"
+                href="https://wa.me/923104051262"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Message on WhatsApp ↗
+              </a>
+
+              <a
+                class="btn btn-outline"
+                href="https://www.google.com/maps/search/?api=1&query=Mehmood+Booti+Station%2C+Lahore%2C+Pakistan"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Open Google Maps ↗
+              </a>
+            </div>
+          </div>
+
+          <div class="map-panel reveal">
+            <div class="map-heading">
+              <div>
+                <h3>Find Our Campus</h3>
+                <p>Near Mehmood Booti Station, Lahore</p>
+              </div>
+              <span class="map-label">LAHORE, PK</span>
+            </div>
+
+            <div class="map-frame">
+              <iframe
+                title="Map showing the Mehmood Booti Station area in Lahore"
+                src="https://maps.google.com/maps?q=Mehmood%20Booti%20Station%2C%20Lahore%2C%20Pakistan&t=&z=14&ie=UTF8&iwloc=&output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CALL TO ACTION -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-card reveal">
+          <div class="cta-copy">
+            <span class="eyebrow">Make Your Move</span>
+            <h2>Every Achievement Begins With a Decision.</h2>
+            <p>
+              Keep learning, keep improving, and keep moving toward your dreams.
+            </p>
+          </div>
+
+          <a class="btn btn-gold" href="#contact">
+            Connect With Us <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+
+      <div class="footer-main">
+
+        <div class="footer-about">
+          <a class="brand" href="#home" aria-label="Dua Academy home">
+            <span class="brand-mark">D</span>
+            <span class="brand-copy">
+              <strong>Dua Academy</strong>
+              <small>Knowledge · Character · Success</small>
+            </span>
+          </a>
+
+          <p>
+            Building a foundation for learning, encouraging ambition,
+            and helping students work toward a brighter future.
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h3>Explore</h3>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#principal">Our Principal</a></li>
+            <li><a href="#teachers">Our Teachers</a></li>
+            <li><a href="#why-us">Why Choose Us?</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column footer-contact">
+          <h3>Visit &amp; Connect</h3>
+
+          <p>
+            <span aria-hidden="true">📍</span>
+            <span>
+              Dua Academy Campus, Near Mehmood Booti Station,
+              Lahore, Pakistan
+            </span>
+          </p>
+
+          <p>
+            <span aria-hidden="true">☎</span>
+            <a href="tel:03104051262">0310-4051262</a>
+          </p>
+
+          <p>
+            <span aria-hidden="true">✉</span>
+            <a
+              href="https://wa.me/923104051262"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              WhatsApp Dua Academy
+            </a>
+          </p>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-bottom-inner">
+
+          <p class="copyright">
+            © <span id="currentYear"></span> Dua Academy.
+            All rights reserved.
+          </p>
+
+          <div class="designer-stamp">
+            OFFICIAL PLATFORM PROUDLY DESIGNED &amp; DEVELOPED BY
+            <span>LARAIB SHAKEEL</span>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- BACK TO TOP BUTTON -->
+  <button
+    class="back-to-top"
+    id="backToTop"
+    type="button"
+    aria-label="Back to top"
+    title="Back to top"
+  >
+    ↑
+  </button>
+
+  <script>
+    /* =========================================
+       1. MOBILE NAVIGATION
+    ========================================= */
+
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+    const navItems = document.querySelectorAll(".nav-links a");
+
+    function closeMenu() {
+      navLinks.classList.remove("open");
+      menuToggle.setAttribute("aria-expanded", "false");
+      menuToggle.setAttribute("aria-label", "Open navigation menu");
+      menuToggle.textContent = "☰";
+    }
+
+    menuToggle.addEventListener("click", function () {
+      const isOpen = navLinks.classList.toggle("open");
+
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Close navigation menu" : "Open navigation menu"
+      );
+
+      menuToggle.textContent = isOpen ? "✕" : "☰";
+    });
+
+    navItems.forEach(function (link) {
+      link.addEventListener("click", closeMenu);
+    });
+
+    document.addEventListener("click", function (event) {
+      const clickedInsideMenu = navLinks.contains(event.target);
+      const clickedToggle = menuToggle.contains(event.target);
+
+      if (!clickedInsideMenu && !clickedToggle) {
+        closeMenu();
+      }
+    });
+
+    window.addEventListener("resize", function () {
+      if (window.innerWidth > 780) {
+        closeMenu();
+      }
+    });
+
+    /* =========================================
+       2. NAVBAR SHADOW & BACK TO TOP
+    ========================================= */
+
+    const navbar = document.getElementById("navbar");
+    const backToTop = document.getElementById("backToTop");
+
+    function handleScroll() {
+      const scrolled = window.scrollY > 25;
+
+      navbar.classList.toggle("scrolled", scrolled);
+      backToTop.classList.toggle("visible", window.scrollY > 450);
+    }
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    backToTop.addEventListener("click", function () {
+      window.scrollTo({
+        top: 0,
+        behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
+          ? "auto"
+          : "smooth"
+      });
+    });
+
+    handleScroll();
+
+    /* =========================================
+       3. AUTOMATIC ACTIVE NAV LINK
+    ========================================= */
+
+    const pageSections = document.querySelectorAll("main section[id]");
+
+    if ("IntersectionObserver" in window) {
+      const sectionObserver = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting) return;
+
+            const sectionId = entry.target.id;
+
+            navItems.forEach(function (link) {
+              const isActive = link.getAttribute("href") === "#" + sectionId;
+              link.classList.toggle("active", isActive);
+            });
+          });
+        },
+        {
+          rootMargin: "-25% 0px -60% 0px",
+          threshold: 0
+        }
+      );
+
+      pageSections.forEach(function (section) {
+        sectionObserver.observe(section);
+      });
+    }
+
+    /* =========================================
+       4. SCROLL REVEAL ANIMATIONS
+    ========================================= */
+
+    const revealElements = document.querySelectorAll(".reveal");
+    const reduceMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+
+    if ("IntersectionObserver" in window && !reduceMotion) {
+      const revealObserver = new IntersectionObserver(
+        function (entries, observer) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        {
+          threshold: 0.12,
+          rootMargin: "0px 0px -35px 0px"
+        }
+      );
+
+      revealElements.forEach(function (element) {
+        revealObserver.observe(element);
+      });
+    } else {
+      revealElements.forEach(function (element) {
+        element.classList.add("is-visible");
+      });
+    }
+
+    /* =========================================
+       5. AUTOMATIC COPYRIGHT YEAR
+    ========================================= */
+
+    document.getElementById("currentYear").textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>
